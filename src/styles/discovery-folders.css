@@ -1,0 +1,487 @@
+/* The supplied reference: objects above a pale folder front, with steady content. */
+.discovery-folders {
+  margin-block: 28px 42px;
+}
+.folder-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+.folder-section-heading h2 {
+  font-size: 18px;
+  font-weight: 570;
+  letter-spacing: -0.45px;
+}
+.folder-section-heading p {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.folder-browse {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 0 8px 8px;
+  min-height: 40px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 550;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+.folder-browse:hover {
+  color: var(--ink);
+}
+.folder-browse > svg {
+  transition: translate 150ms var(--ease);
+}
+.folder-browse:hover > svg {
+  translate: 2px 0;
+}
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.discovery-folder {
+  --folder-fill: #fbede6;
+  --folder-ink: #89472d;
+  --folder-rule: #e5cdbf;
+  position: relative;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: 0 2px 3px #26334502;
+  transition:
+    border-color 160ms ease-out,
+    box-shadow 160ms ease-out;
+  isolation: isolate;
+}
+.discovery-folder.folder-lilac {
+  --folder-fill: #f0eafa;
+  --folder-ink: #654684;
+  --folder-rule: #dacde9;
+}
+.discovery-folder.folder-blue {
+  --folder-fill: #e9f3fa;
+  --folder-ink: #315f7c;
+  --folder-rule: #cbdfe9;
+}
+.discovery-folder.folder-sage {
+  --folder-fill: #edf4ed;
+  --folder-ink: #42634a;
+  --folder-rule: #cfdfcf;
+}
+.discovery-folder:focus-within {
+  border-color: var(--line-strong);
+}
+.folder-art {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(12px, 2.4vw, 38px);
+  height: 155px;
+  padding-top: 13px;
+}
+.folder-tool {
+  --folder-angle: -7deg;
+  --folder-lift: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 94px;
+  height: 125px;
+  position: relative;
+  border-radius: 20px;
+  flex: 0 1 94px;
+}
+.folder-tool:nth-child(2) {
+  --folder-angle: 2deg;
+  --folder-lift: -4px;
+}
+.folder-tool:nth-child(3) {
+  --folder-angle: 7deg;
+}
+.folder-tool-object {
+  display: block;
+  position: relative;
+  transform: translateY(var(--folder-lift)) rotate(var(--folder-angle));
+  transition: transform 240ms var(--motion-settle);
+  transform-origin: center 80%;
+}
+.folder-tool-object .tool-logo {
+  width: 82px;
+  height: 82px;
+  padding: 15px;
+  border-radius: 22px;
+  border: 1px solid #e1e5eb;
+  background: var(--logo-bg, #fff);
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 2px 4px #24344b07,
+    0 9px 16px #24344b0d;
+  transition: box-shadow 180ms ease-out;
+}
+.folder-tool-object .tool-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.folder-tool-name {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 520;
+  white-space: nowrap;
+}
+.folder-tool-open {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 2px 5px #2633450c;
+  opacity: 0;
+  translate: -2px 2px;
+  transition:
+    opacity 120ms ease-out,
+    translate 160ms var(--ease);
+}
+.folder-tool:focus-visible .folder-tool-object {
+  transform: translateY(-9px) rotate(0deg) scale(1.045);
+}
+.folder-tool:focus-visible .folder-tool-open {
+  opacity: 1;
+  translate: 0 0;
+}
+.folder-front {
+  display: block;
+  position: relative;
+  min-width: 0;
+  border-radius: 16px;
+  margin-top: -7px;
+}
+.folder-silhouette {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: var(--folder-fill);
+  pointer-events: none;
+  z-index: -1;
+}
+.folder-front-content {
+  padding: 15px 20px 16px;
+}
+.folder-front h3 {
+  max-width: 72%;
+  font-size: 24px;
+  font-weight: 550;
+  letter-spacing: -0.7px;
+  line-height: 1.2;
+  color: var(--folder-ink);
+}
+.folder-front-line {
+  height: 1px;
+  background: var(--folder-rule);
+  margin-block: 15px 11px;
+}
+.folder-front-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.folder-front p {
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 310px;
+  color: var(--ink);
+}
+.folder-tool-count {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.folder-open {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  color: var(--folder-ink);
+  background: #ffffff85;
+  border: 1px solid #ffffffb3;
+  border-radius: 50%;
+  transition: background-color 140ms ease-out;
+}
+.folder-open svg {
+  transition: translate 160ms var(--ease);
+}
+.folder-front:focus-visible .folder-open {
+  background: var(--surface);
+}
+:root[data-theme='dark'] .discovery-folder.folder-peach {
+  --folder-fill: #332925;
+  --folder-ink: #ebc5ad;
+  --folder-rule: #59453b;
+}
+:root[data-theme='dark'] .discovery-folder.folder-lilac {
+  --folder-fill: #302a3b;
+  --folder-ink: #d4c2eb;
+  --folder-rule: #4d425e;
+}
+:root[data-theme='dark'] .discovery-folder.folder-blue {
+  --folder-fill: #24323b;
+  --folder-ink: #b6d6e9;
+  --folder-rule: #3f5665;
+}
+:root[data-theme='dark'] .discovery-folder.folder-sage {
+  --folder-fill: #28352c;
+  --folder-ink: #c0dcc5;
+  --folder-rule: #435a49;
+}
+:root[data-theme='dark'] .folder-open {
+  background: #ffffff0b;
+  border-color: #ffffff12;
+}
+:root[data-theme='dark'] .folder-tool-object .tool-logo {
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 7px 17px #0004;
+}
+@media (hover: hover) and (pointer: fine) {
+  .discovery-folder:hover {
+    border-color: var(--line-strong);
+    box-shadow: 0 4px 18px #26334507;
+  }
+  .folder-tool:hover .folder-tool-object {
+    transform: translateY(-9px) rotate(0deg) scale(1.045);
+  }
+  .folder-tool:hover .tool-logo {
+    box-shadow:
+      inset 0 1px 0 #fff,
+      0 3px 5px #24344b07,
+      0 12px 22px #24344b18;
+  }
+  .folder-tool:hover .folder-tool-open {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .folder-tool:hover .folder-tool-name {
+    color: var(--ink);
+  }
+  .folder-front:hover .folder-open {
+    background: var(--surface);
+  }
+  .folder-front:hover .folder-open svg {
+    translate: 2px -2px;
+  }
+}
+.folder-tool:active .folder-tool-object {
+  transform: translateY(-2px) rotate(0deg) scale(0.98);
+  transition-duration: 90ms;
+}
+@media (min-width: 761px) and (max-width: 1200px) {
+  .folder-art {
+    gap: 13px;
+    height: 139px;
+    padding-top: 12px;
+  }
+  .folder-tool {
+    width: 78px;
+    flex-basis: 78px;
+    height: 116px;
+  }
+  .folder-tool-object .tool-logo {
+    width: 70px;
+    height: 70px;
+    padding: 13px;
+    border-radius: 19px;
+  }
+  .folder-front-content {
+    padding-inline: 16px;
+  }
+  .folder-front h3 {
+    font-size: 20px;
+  }
+  .folder-front p {
+    font-size: 12px;
+    min-height: 36px;
+  }
+  .folder-front-bottom {
+    gap: 8px;
+  }
+}
+@media (max-width: 760px) {
+  .discovery-folders {
+    margin-block: 26px 34px;
+  }
+  .folder-grid {
+    gap: 16px;
+  }
+  .folder-section-heading {
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .folder-section-heading h2 {
+    font-size: 17px;
+  }
+  .folder-section-heading p {
+    font-size: 11px;
+    max-width: 230px;
+  }
+  .folder-browse {
+    font-size: 11px;
+    padding-top: 0;
+    min-height: 36px;
+    gap: 5px;
+  }
+  .folder-art {
+    gap: 14px;
+  }
+  .folder-front-content {
+    padding-inline: 17px;
+  }
+  .folder-front h3 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 620px) {
+  .folder-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .discovery-folder {
+    padding: 12px;
+    border-radius: 22px;
+  }
+  .folder-art {
+    height: 144px;
+  }
+  .folder-tool {
+    width: 86px;
+    flex-basis: 86px;
+  }
+  .folder-tool-object .tool-logo {
+    width: 76px;
+    height: 76px;
+    padding: 14px;
+    border-radius: 21px;
+  }
+  .folder-tool-name {
+    font-size: 10px;
+  }
+  .folder-front p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 360px) {
+  .folder-section-heading h2 {
+    font-size: 16px;
+  }
+  .folder-section-heading p {
+    max-width: 170px;
+  }
+  .folder-browse {
+    font-size: 10px;
+  }
+  .folder-art {
+    gap: 6px;
+    height: 137px;
+  }
+  .folder-tool {
+    width: 73px;
+    flex-basis: 73px;
+  }
+  .folder-tool-object .tool-logo {
+    width: 66px;
+    height: 66px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+  .folder-front-content {
+    padding-inline: 14px;
+  }
+  .folder-front h3 {
+    font-size: 19px;
+  }
+  .folder-front-bottom {
+    gap: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .folder-tool .folder-tool-object,
+  .folder-tool:hover .folder-tool-object,
+  .folder-tool:focus-visible .folder-tool-object,
+  .folder-tool:active .folder-tool-object {
+    transform: none;
+  }
+  .folder-browse > svg,
+  .folder-open svg,
+  .folder-tool-open {
+    translate: none !important;
+    transition: none;
+  }
+}
+@media (forced-colors: active) {
+  .folder-silhouette {
+    fill: Canvas;
+    stroke: CanvasText;
+    stroke-width: 2;
+  }
+  .folder-front h3,
+  .folder-front p,
+  .folder-open,
+  .folder-tool-open {
+    color: CanvasText;
+  }
+  .folder-front-line {
+    background: CanvasText;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 760px) {
+  .folder-art {
+    height: 135px;
+    gap: 10px;
+  }
+  .folder-tool {
+    width: 70px;
+    flex-basis: 70px;
+    height: 112px;
+  }
+  .folder-tool-object .tool-logo {
+    width: 64px;
+    height: 64px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+  .folder-tool-name {
+    font-size: 10px;
+  }
+  .folder-front h3 {
+    font-size: 20px;
+  }
+  .folder-front-bottom {
+    gap: 8px;
+  }
+  .folder-front p {
+    font-size: 12px;
+    min-height: 36px;
+  }
+}

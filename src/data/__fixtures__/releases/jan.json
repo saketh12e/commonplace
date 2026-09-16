@@ -1,0 +1,17 @@
+{
+  "upstream": {
+    "url": "https://api.github.com/repos/janhq/jan/releases/358419250",
+    "html_url": "https://github.com/janhq/jan/releases/tag/v0.8.4",
+    "tag_name": "v0.8.4",
+    "name": "0.8.4",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-07-23T06:29:15Z",
+    "bodyLength": 4988,
+    "bodySha256": "f0d9e6f3244a45ef48f94791a8e060c6dedc18b8874e6451213a171631b80915"
+  },
+  "fetched": {
+    "url": "https://api.github.com/repos/janhq/jan/releases/latest",
+    "fetchedAt": "2026-09-16T12:19:38.489662+00:00"
+  }
+}

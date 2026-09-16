@@ -1,0 +1,12 @@
+node_modules
+dist
+work
+output
+public/logos
+package-lock.json
+
+.playwright*
+coverage
+playwright-report
+test-results
+public/licenses

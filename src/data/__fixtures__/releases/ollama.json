@@ -1,0 +1,17 @@
+{
+  "upstream": {
+    "url": "https://api.github.com/repos/ollama/ollama/releases/388717036",
+    "html_url": "https://github.com/ollama/ollama/releases/tag/v0.34.1",
+    "tag_name": "v0.34.1",
+    "name": "v0.34.1",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-09-14T22:14:03Z",
+    "bodyLength": 705,
+    "bodySha256": "2e16477b378cd4e93687794f51d3614abd5313d146773a90633a57c6f8822aaf"
+  },
+  "fetched": {
+    "url": "https://api.github.com/repos/ollama/ollama/releases/latest",
+    "fetchedAt": "2026-09-16T12:19:38.500220+00:00"
+  }
+}

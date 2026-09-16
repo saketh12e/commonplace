@@ -1,0 +1,17 @@
+{
+  "upstream": {
+    "url": "https://api.github.com/repos/node-red/node-red/releases/384759508",
+    "html_url": "https://github.com/node-red/node-red/releases/tag/5.0.7",
+    "tag_name": "5.0.7",
+    "name": "5.0.7: Maintenance Release",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-09-08T13:35:43Z",
+    "bodyLength": 1077,
+    "bodySha256": "f7a3d2a063121c67527033bb0f2c6ce9e87e0fa4ff08a4da12fcac793a6adfe8"
+  },
+  "fetched": {
+    "url": "https://api.github.com/repos/node-red/node-red/releases/latest",
+    "fetchedAt": "2026-09-16T12:19:38.417185+00:00"
+  }
+}

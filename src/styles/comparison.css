@@ -1,0 +1,205 @@
+/* V2 lock: quiet neutral controls, readable identities, explicit state and focus. */
+.comparison-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 24px;
+}
+.comparison-add {
+  display: grid;
+  gap: 8px;
+  width: min(100%, 340px);
+  font-size: 14px;
+  font-weight: 500;
+}
+.comparison-count {
+  color: var(--muted);
+  font-weight: 400;
+  margin-left: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.comparison-page select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 9px 30px 9px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+.comparison-differences {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.comparison-differences input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--ink);
+  cursor: pointer;
+}
+.comparison-selection-hint,
+.comparison-filter-status {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.comparison-selection-hint {
+  margin: 10px 0 0;
+}
+.comparison-filter-status {
+  margin: 8px 0 22px;
+}
+.comparison-column-controls {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.comparison-replace {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.comparison-remove {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  color: var(--muted);
+  background: var(--surface);
+  cursor: pointer;
+}
+.comparison-remove:hover,
+.comparison-page select:hover {
+  background: var(--surface-subtle);
+  border-color: var(--muted);
+}
+.comparison-page :is(select, input, button, a, .comparison-scroll):focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+.comparison-page .comparison-scroll {
+  scroll-padding-inline-start: 184px;
+}
+.comparison-page .comparison-table th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--surface-subtle);
+}
+.comparison-page .comparison-columns-1 {
+  min-width: 440px;
+}
+.comparison-page .comparison-columns-2 {
+  min-width: 700px;
+}
+.comparison-page .comparison-columns-3 {
+  min-width: 960px;
+}
+.comparison-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+.comparison-platforms > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+.comparison-platforms svg {
+  flex: 0 0 20px;
+  color: var(--ink);
+}
+.comparison-project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.comparison-project-links > a:last-child {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+.comparison-page .comparison-no-differences {
+  padding: 30px 24px;
+  color: var(--ink);
+}
+.comparison-no-differences strong,
+.comparison-no-differences span {
+  display: block;
+  max-width: 560px;
+}
+.comparison-no-differences span {
+  color: var(--muted);
+  margin: 6px 0 16px;
+}
+.comparison-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 760px) {
+  .comparison-controls {
+    gap: 12px;
+  }
+  .comparison-add {
+    width: 100%;
+  }
+  .comparison-page .comparison-scroll {
+    scroll-padding-inline-start: 124px;
+  }
+  .comparison-page .comparison-table th:first-child {
+    width: 120px;
+  }
+  .comparison-page .comparison-columns-1 {
+    min-width: 380px;
+  }
+  .comparison-page .comparison-columns-2 {
+    min-width: 640px;
+  }
+  .comparison-page .comparison-columns-3 {
+    min-width: 900px;
+  }
+  .comparison-page .comparison-no-differences {
+    padding: 22px 16px;
+  }
+  .comparison-no-differences strong,
+  .comparison-no-differences span {
+    max-width: min(560px, calc(100vw - 96px));
+  }
+}
+/* Keep comparison utility actions readable in both existing themes. */
+.comparison-page .button {
+  color: var(--ink);
+  background: var(--surface);
+}
+.comparison-page .button:hover {
+  background: var(--surface-subtle);
+}

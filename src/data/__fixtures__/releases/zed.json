@@ -1,0 +1,17 @@
+{
+  "upstream": {
+    "url": "https://api.github.com/repos/zed-industries/zed/releases/385649911",
+    "html_url": "https://github.com/zed-industries/zed/releases/tag/v1.19.2",
+    "tag_name": "v1.19.2",
+    "name": "v1.19.2",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-09-09T17:41:24Z",
+    "bodyLength": 10798,
+    "bodySha256": "2e884e773475aae218d55e0b94e3c70a1dfbbb94e610947e3b806b633c12fb72"
+  },
+  "fetched": {
+    "url": "https://api.github.com/repos/zed-industries/zed/releases/latest",
+    "fetchedAt": "2026-09-16T12:19:38.500510+00:00"
+  }
+}

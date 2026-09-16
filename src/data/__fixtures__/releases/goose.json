@@ -1,0 +1,18 @@
+{
+  "upstream": {
+    "url": "https://api.github.com/repos/aaif-goose/goose/releases/388709907",
+    "html_url": "https://github.com/aaif-goose/goose/releases/tag/v1.50.1",
+    "tag_name": "v1.50.1",
+    "name": "v1.50.1",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-09-14T21:00:01Z",
+    "bodyLength": 205,
+    "bodySha256": "10a4e7b2d29ef6666b687133fbe96d61ba6713a297b5963384d2736b85754acf"
+  },
+  "fetched": {
+    "url": "https://api.github.com/repos/block/goose/releases/latest",
+    "fetchedAt": "2026-09-16T12:19:38.936492+00:00"
+  },
+  "httpStatuses": [301, 200]
+}

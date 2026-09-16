@@ -1,0 +1,17 @@
+{
+  "upstream": {
+    "url": "https://api.github.com/repos/penpot/penpot/releases/377670384",
+    "html_url": "https://github.com/penpot/penpot/releases/tag/2.17.2",
+    "tag_name": "2.17.2",
+    "name": "2.17.2",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-08-27T08:31:12Z",
+    "bodyLength": 532,
+    "bodySha256": "37a77d080950f224f46e492e263077c8574b3939e0ce06c3b7e284459e98106b"
+  },
+  "fetched": {
+    "url": "https://api.github.com/repos/penpot/penpot/releases/latest",
+    "fetchedAt": "2026-09-16T12:19:38.890332+00:00"
+  }
+}

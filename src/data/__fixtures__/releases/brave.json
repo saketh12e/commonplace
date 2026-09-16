@@ -1,0 +1,17 @@
+{
+  "upstream": {
+    "url": "https://api.github.com/repos/brave/brave-browser/releases/386767914",
+    "html_url": "https://github.com/brave/brave-browser/releases/tag/v1.95.101",
+    "tag_name": "v1.95.101",
+    "name": "Release v1.95.101 (Chromium 153.0.8010.37) \n\n",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-09-11T03:31:20Z",
+    "bodyLength": 6947,
+    "bodySha256": "5eb21674e73b5a9079fdeece90238483f40424881a4b7976df7d99eff1c008c5"
+  },
+  "fetched": {
+    "url": "https://api.github.com/repos/brave/brave-browser/releases/latest",
+    "fetchedAt": "2026-09-16T12:19:38.649578+00:00"
+  }
+}

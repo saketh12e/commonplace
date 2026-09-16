@@ -1,0 +1,220 @@
+/* Scoped workspace chrome: compact navigation, catalog categories and a fixed footer.
+   Keep these selectors stronger than the shared chrome loaded by main.tsx. */
+.sidebar.library-rail {
+  padding: 20px 14px 12px;
+  overflow: hidden;
+}
+
+.sidebar.library-rail > .brand {
+  margin-inline: 6px;
+}
+
+.sidebar.library-rail .rail-search {
+  height: 38px;
+  margin: 18px 4px 12px;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.sidebar.library-rail .library-rail-scroll {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+  scroll-padding-block: 6px;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.sidebar.library-rail .workspace-nav,
+.sidebar.library-rail .library-category-nav {
+  display: grid;
+  gap: 2px;
+}
+
+.sidebar.library-rail .workspace-nav .nav-item,
+.sidebar.library-rail .library-category-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  height: 36px;
+  min-height: 36px;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 8px;
+  color: var(--muted);
+  background: transparent;
+  box-shadow: none;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 480;
+  transition: none;
+}
+
+.sidebar.library-rail .workspace-nav .nav-item::before {
+  content: none;
+}
+
+.sidebar.library-rail .library-category-link {
+  height: 32px;
+  min-height: 32px;
+  padding-block: 5px;
+}
+
+.sidebar.library-rail .workspace-nav .nav-item:hover,
+.sidebar.library-rail .library-category-link:hover {
+  color: var(--ink);
+  background: var(--surface-subtle);
+}
+
+.sidebar.library-rail .workspace-nav .nav-item.active,
+.sidebar.library-rail .library-category-link.active {
+  color: var(--ink);
+  background: var(--selected-bg);
+  font-weight: 620;
+}
+
+.sidebar.library-rail .workspace-nav .nav-item.active > svg {
+  color: inherit;
+}
+
+.sidebar.library-rail .category-count,
+.sidebar.library-rail .nav-count {
+  margin-left: auto;
+  padding: 0;
+  background: transparent;
+  color: var(--quiet);
+  font-size: 11px;
+  font-weight: 450;
+  font-variant-numeric: tabular-nums;
+}
+
+.sidebar.library-rail .rail-divider {
+  margin: 10px 10px 8px;
+}
+
+.sidebar.library-rail .rail-label {
+  padding-inline: 10px;
+  margin: 0 0 7px;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+}
+
+.sidebar.library-rail .rail-bottom {
+  margin-top: 10px;
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+}
+
+.sidebar.library-rail .profile-control {
+  padding: 8px 5px;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.sidebar.library-rail .profile-control:hover {
+  background: var(--surface-subtle);
+}
+
+.sidebar.library-rail .profile-control > span:nth-child(2) {
+  flex: 1;
+}
+
+.sidebar.library-rail .profile-control strong {
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.sidebar.library-rail .profile-control small {
+  max-width: 100%;
+  font-size: 11px;
+}
+
+.sidebar.library-rail .profile-avatar {
+  flex-shrink: 0;
+}
+
+.sidebar.library-rail :is(a, button, .library-rail-scroll):focus-visible {
+  outline-offset: 1px;
+}
+
+.sidebar.library-rail .library-rail-topics {
+  display: none;
+}
+
+.topbar .library-topics-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 5px 7px;
+  border-radius: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.topbar .library-topics-trigger:hover {
+  color: var(--ink);
+  background: var(--surface-subtle);
+}
+
+@media (max-width: 1020px) {
+  .sidebar.library-rail .library-rail-explore,
+  .topbar .library-topics-trigger {
+    display: none;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1020px) {
+  .sidebar.library-rail {
+    padding: 20px 9px 12px;
+  }
+
+  .sidebar.library-rail > .brand {
+    margin-inline: 0;
+  }
+
+  .sidebar.library-rail .rail-search {
+    margin-inline: 3px;
+  }
+
+  .sidebar.library-rail .workspace-nav .nav-item {
+    justify-content: center;
+    height: 42px;
+    min-height: 42px;
+    padding: 10px;
+  }
+
+  .sidebar.library-rail .library-rail-topics {
+    display: flex;
+    justify-content: center;
+    min-height: 42px;
+    margin-top: 12px;
+    padding: 10px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+    transition: none;
+  }
+
+  .sidebar.library-rail .library-rail-topics:hover {
+    background: var(--surface-subtle);
+  }
+
+  .sidebar.library-rail .rail-divider {
+    margin-inline: 7px;
+  }
+
+  .sidebar.library-rail .profile-control {
+    padding: 8px 0;
+  }
+}

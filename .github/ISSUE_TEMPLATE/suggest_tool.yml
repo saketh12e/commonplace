@@ -1,0 +1,19 @@
+name: Suggest a tool
+description: Suggest an open-source tool for maintainer review.
+title: '[Tool]: '
+labels: [catalog]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Official website or source repository
+      description: Use the project's official HTTPS link. A suggestion enters review and does not publish automatically.
+      placeholder: https://github.com/owner/project
+    validations:
+      required: true

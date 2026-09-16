@@ -1,0 +1,20 @@
+node_modules/
+dist/
+work/
+output/
+.playwright*/
+.env*
+!.env.example
+.DS_Store
+._*
+*.tsbuildinfo
+
+# Local validation and editor state
+coverage/
+playwright-report/
+test-results/
+*.log
+*.local
+.idea/
+.vscode/
+.codex/

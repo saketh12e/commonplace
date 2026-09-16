@@ -1,0 +1,47 @@
+name: Suggest an open-source tool
+description: Share a useful project for the library.
+title: 'Tool: '
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Official website
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source repository
+      placeholder: https://github.com/
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: Open-source license and its source link
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: What does it help with, and why recommend it?
+    validations:
+      required: true
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Verified platforms
+      options:
+        - label: macOS
+        - label: Windows
+        - label: Linux
+        - label: Web
+        - label: iOS
+        - label: Android

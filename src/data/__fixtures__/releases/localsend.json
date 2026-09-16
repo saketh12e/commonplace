@@ -1,0 +1,17 @@
+{
+  "upstream": {
+    "url": "https://api.github.com/repos/localsend/localsend/releases/374422528",
+    "html_url": "https://github.com/localsend/localsend/releases/tag/v1.18.2",
+    "tag_name": "v1.18.2",
+    "name": "v1.18.2",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-08-21T14:02:01Z",
+    "bodyLength": 1194,
+    "bodySha256": "a4e2884b83f40fef51fb76e6ad3cc022afe0ca8391e477ce0439a1374be5ced7"
+  },
+  "fetched": {
+    "url": "https://api.github.com/repos/localsend/localsend/releases/latest",
+    "fetchedAt": "2026-09-16T12:19:38.518887+00:00"
+  }
+}

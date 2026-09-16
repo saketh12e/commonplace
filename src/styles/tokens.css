@@ -1,0 +1,209 @@
+:root {
+  color-scheme: light;
+  --canvas: #f7f8f9;
+  --surface: #ffffff;
+  --ink: #20242a;
+  --muted: #5f6976;
+  --quiet: #66707c;
+  --line: #e7eaee;
+  --line-strong: #d6dce3;
+  --accent: #37566e;
+  --accent-wash: #edf2f5;
+  --sidebar: #fcfcfd;
+  --surface-subtle: #f6f7f9;
+  --surface-tint: #eef1f5;
+  --selected-bg: #edf0f3;
+  --focus-border: #8daace;
+  --glass: #ffffffc9;
+  --glass-line: #ffffffd9;
+  --highlight: #ffffff;
+  --empty-bg: #ffffff70;
+  --overlay: #25354a45;
+  --action: #29333f;
+  --action-hover: #172331;
+  --on-action: #fff;
+  --brand-primary: #303843;
+  --brand-secondary: #6d7888;
+  --control-mark: #637c9b;
+  --success: #537763;
+  --success-bg: #eef5f0;
+  --warning: #715c33;
+  --warning-bg: #faf1df;
+  --danger: #ad4747;
+  --collection-peach: #f6f0eb;
+  --collection-lavender: #f0eff5;
+  --collection-sand: #f5f3eb;
+  --font: 'DM Sans Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --display: var(--font);
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 2px 3px #202b3c03, 0 8px 24px #202b3c05;
+  --glass-shadow: inset 0 1px 0 var(--highlight), 0 2px 5px #18283e05, 0 6px 16px #18283e06;
+  --fast: 120ms;
+  --motion: 200ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --rail: 256px;
+  --page-gutter: clamp(24px, 3.4vw, 60px);
+  font-family: var(--font);
+  color: var(--ink);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --canvas: #111214;
+  --sidebar: #141619;
+  --surface: #1b1d21;
+  --surface-subtle: #22252a;
+  --surface-tint: #222831;
+  --ink: #f0f2f5;
+  --muted: #b2b9c5;
+  --quiet: #a9b1bd;
+  --line: #30353e;
+  --line-strong: #444d5a;
+  --accent: #b0cefa;
+  --accent-wash: #263448;
+  --selected-bg: #2b3037;
+  --focus-border: #8aa9d3;
+  --glass: #25292fd9;
+  --glass-line: #464f5e;
+  --highlight: #ffffff0c;
+  --empty-bg: #1b1d2180;
+  --overlay: #080b1070;
+  --action: #e5eaf2;
+  --action-hover: #ffffff;
+  --on-action: #1a2431;
+  --brand-primary: #e3e8f0;
+  --brand-secondary: #98a4b5;
+  --control-mark: #a5bad6;
+  --success: #b4d5be;
+  --success-bg: #22372c;
+  --warning: #ebcc93;
+  --warning-bg: #3a3122;
+  --danger: #ffb4b4;
+  --collection-peach: #312822;
+  --collection-lavender: #2b2838;
+  --collection-sand: #302e23;
+  --shadow: 0 3px 12px #00000020;
+  --glass-shadow: inset 0 1px 0 var(--highlight), 0 3px 12px #00000024;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--canvas);
+  min-width: 320px;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: #3265be12;
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button,
+a {
+  -webkit-user-select: none;
+  user-select: none;
+}
+button {
+  background: none;
+  border: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+button,
+a {
+  outline-offset: 4px;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+}
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-offset: 2px;
+}
+::selection {
+  background: var(--selected-bg);
+  color: var(--ink);
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+svg {
+  flex-shrink: 0;
+}
+button svg {
+  pointer-events: none;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.mobile-only,
+.mobile-brand,
+.mobile-navigation {
+  display: none;
+}
+.skip-link {
+  position: fixed;
+  z-index: 150;
+  left: 16px;
+  top: -100px;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+}
+.skip-link:focus {
+  top: 16px;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --fast: 0ms;
+    --motion: 0ms;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
