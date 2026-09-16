@@ -6,7 +6,7 @@ The root MIT license covers Commonplace's original source and documentation. It 
 
 `public/logos/` contains official project artwork used to identify catalog entries. These marks remain the property of their respective owners; inclusion does not imply affiliation or endorsement. The catalog's software-license label describes the listed application and is not a claim that its logo has the same license.
 
-Source records are maintained in [catalog-sources.md](docs/catalog-sources.md), [catalog-v2-sources.md](docs/catalog-v2-sources.md) and [project-icons-v3.md](docs/project-icons-v3.md). Preserve these records and applicable upstream notices when redistributing or changing assets. Follow each project's brand requirements when using its marks beyond identification.
+The [asset manifest](docs/asset-manifest.json) and [provenance notes](docs/asset-provenance.md) record current hashes, source evidence and known artwork declarations, with unknown terms explicitly identified. Source records are maintained in [catalog-sources.md](docs/catalog-sources.md), [catalog-v2-sources.md](docs/catalog-v2-sources.md) and [project-icons-v3.md](docs/project-icons-v3.md). Preserve these records and applicable upstream notices when redistributing or changing assets. Follow each project's brand requirements when using its marks beyond identification.
 
 ## Platform artwork
 
